@@ -11,5 +11,5 @@ export class CardComponent {
   @Input() company: string = "Entreprise du soleil";
   @Input() activity: string = "7911Z - Activités des agences de voyage";
   @Input() note: string = "52.01";
-  @Input() risk: string = "C";
+  @Input() score: string = "C";
 }

@@ -27,7 +27,7 @@
     }
 
     .right {
-        .rank, .risk {
+        .score, .risk {
             vertical-align: middle;
         }
     }
