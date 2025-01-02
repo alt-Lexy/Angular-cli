@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
-  company: string = "Entreprise du soleil";
-  activity: string = "entreprise spécialisé dans le tourisme";
-  note: string = "52.01";
-  risk: string = "C";
+  @Input() company: string = "Entreprise du soleil";
+  @Input() activity: string = "7911Z - Activités des agences de voyage";
+  @Input() note: string = "52.01";
+  @Input() risk: string = "C";
 }
