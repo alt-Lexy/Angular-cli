@@ -1,0 +1,34 @@
+#card {
+    display: block;
+    width: 30vw;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+#header {
+    .company {
+        font-size: 2vw;
+    }
+    .activity {
+        font-size: 1vw;
+    }
+}
+
+#description {
+    display: flex;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+
+    .left, .right {
+        width: 15vw;
+    }
+
+    .right {
+        .rank, .risk {
+            vertical-align: middle;
+        }
+    }
+}
