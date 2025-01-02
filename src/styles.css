@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     background-color: #f9f9f9;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: -apple-system,
+        system-ui,
+        system-ui,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        "Fira Sans",
+        Ubuntu,
+        Oxygen,
+        "Oxygen Sans",
+        Cantarell,
+        "Droid Sans",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Lucida Grande",
+        Helvetica,
+        Arial,
+        sans-serif;
 }

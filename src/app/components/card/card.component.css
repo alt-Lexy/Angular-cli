@@ -1,34 +1,73 @@
 #card {
     display: block;
-    width: 30vw;
-    padding: 2vw;
-    border-radius: 1vw;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    width: 20vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 
 #header {
     .company {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
+
     .activity {
-        font-size: 1vw;
+        font-size: 0.8vw;
     }
 }
 
 #description {
     display: flex;
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: bold;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
+    gap: 8vw;
 
-    .left, .right {
-        width: 15vw;
+    .left,
+    .right {
+        width: 10vw;
     }
 
     .right {
-        .score, .risk {
+
+        .score,
+        .risk {
             vertical-align: middle;
         }
+    }
+}
+
+#detail {
+    .info {
+        align-items: center;
+        background-color: #0A66C2;
+        border: 0;
+        border-radius: 1vw;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.9vw;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        max-width: 48vw;
+        min-height: 4vh;
+        min-width: 0vw;
+        overflow: hidden;
+        padding: 0vw 2vw;
+        text-align: center;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        vertical-align: middle;
+    }
+
+    .info:hover,
+    .info:focus {
+        background-color: #16437E;
+    }
+
+    .info:active {
+        background: #09223b;
     }
 }
