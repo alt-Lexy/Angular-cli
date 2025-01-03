@@ -12,6 +12,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 })
 export class AppComponent {
   company!: Company;
+  count: number = 0;
 
   constructor() {
     this.company = new Company();
@@ -19,5 +20,9 @@ export class AppComponent {
     this.company.infoActivity = "7911Z - Activités des agences de voyage";
     this.company.infoNote = "52.01";
     this.company.infoScore = "C";
+  }
+
+  increaseCount(){
+    this.count ++
   }
 }
