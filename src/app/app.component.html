@@ -1,5 +1,6 @@
 <div>
-    <app-search-bar (searchBtnClicked)="increaseCount()"/>
+    <app-search-bar (submit)="increaseCount()" [(search)]="search"/>
+    <i>Searched value: {{search}}</i>
     <i>Search count: {{count}}</i>
 </div>
 <h2>Long term investments</h2>
