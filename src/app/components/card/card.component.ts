@@ -1,5 +1,6 @@
-import { Component, input, Input, InputSignal } from '@angular/core';
+import { Component, computed, input, Input, InputSignal, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Company } from '../../models/company.model';
+import { CompanyTypeProps } from '../../utils/company.utils';
 
 @Component({
   selector: 'app-card',
@@ -8,11 +9,17 @@ import { Company } from '../../models/company.model';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
+  
+  company = input(new Company());
+  backgroundColor = computed(()=>{
+    return CompanyTypeProps[this.company().type].color;
+  })
 
   // input can be required input.required
-  company: InputSignal<Company> = input(new Company(), {
+  /* solus 3 */
+  /*company: InputSignal<Company> = input(new Company(), {
     alias: 'headOffice'
-  });
+  });*/
 
   /* Input can be required
   /* second method

@@ -60,3 +60,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 >[!NOTE]
 >*public* folder replace *Asset* folder since V18
+
+>[!NOTE]
+>ng g c component allow 
+ 

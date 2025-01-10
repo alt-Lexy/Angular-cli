@@ -1,10 +1,8 @@
 <div>
-    <app-search-bar (submit)="increaseCount()" [(search)]="search"/>
-    <i>Searched value: {{search}}</i>
-    <i>Search count: {{count}}</i>
+    <app-search-bar [(search)]="search"/>
 </div>
 <h2>Long term investments</h2>
 <div id="card-list">
-    <app-card/>
-    <app-card [headOffice]="company"/>
+    <app-card *ngFor="let company of filteredCompanies()" [company]="company"/>
 </div>
+<div>Found {{filteredCompanies().length}} companies</div>
