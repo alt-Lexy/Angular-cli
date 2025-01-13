@@ -56,15 +56,17 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.  
+
+## Additional info    
 
 >[!NOTE]
 >*public* folder replace *Asset* folder since V18
 
 >[!NOTE]
->ng g c component allow 
-> ou
-> ng g s services/folder/serviceName
+>ng g c component allow   
+> ou  
+> ng g s services/folder/serviceName  
 
 >[!NOTE] 
 >track in angular = useMemo() in react js
