@@ -1,0 +1,15 @@
+<div>
+    <app-search-bar [(search)]="search"/>
+</div>
+<h2>Long term investments</h2>
+<div id="card-list">
+    @for (company of filteredCompanies(); track company) {
+        <app-card [company]="company"/>
+    } @empty {
+    <div>No monsters found</div>
+    }
+</div>
+@if (filteredCompanies().length > 0) {
+    <div *ngIf="filteredCompanies().length > 0">Found {{filteredCompanies().length}} companies</div>
+}
+<div><button (click)="addCompany()">Add company</button></div>

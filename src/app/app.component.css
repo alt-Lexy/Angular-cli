@@ -1,9 +1,3 @@
 h2 {
     color: #797878;
 }
-
-#card-list {
-    display: flex;
-    gap: 2vw;
-    flex-wrap: wrap;
-}

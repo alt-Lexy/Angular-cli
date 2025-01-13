@@ -5,31 +5,15 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CompanyType } from './utils/company.utils';
 import { CommonModule } from '@angular/common';
 import { CompanyService } from './services/company/company.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, CardComponent, SearchBarComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  companyService = inject(CompanyService)
 
-  companies = signal<Company[]>([]);
-  search = model('');
-
-  filteredCompanies = computed(() =>{
-    return this.companies().filter(company => company.infoCompany.toLocaleLowerCase().includes(this.search()))
-  })
-
-  constructor() { 
-    this.companies.set(this.companyService.getAll());
-  }
-
-  addCompany() {
-    const genericCompany = new Company();
-    this.companyService.add(genericCompany);
-    this.companies.set(this.companyService.getAll());
-  }
 }

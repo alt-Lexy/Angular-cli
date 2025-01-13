@@ -10,7 +10,7 @@ export class CompanyService {
   companies: Company[] = []
   currentIndex: number = 1;
 
-  constructor() { 
+  constructor() {
     this.load();
   }
 
@@ -20,7 +20,7 @@ export class CompanyService {
 
   private load() {
     const companyData = localStorage.getItem('company');
-    if(companyData) {
+    if (companyData) {
       this.companies = JSON.parse(companyData).map((companyJSON: any) => Object.assign(new Company(), companyJSON))
       this.currentIndex = Math.max(...this.companies.map(company => company.id))
     } else {
@@ -48,7 +48,7 @@ export class CompanyService {
     company2.infoNote = "90.08";
     company2.infoScore = "A";
     this.companies.push(company2)
-    
+
     const company3 = new Company();
     company3.id = this.currentIndex++;
     company3.infoCompany = "Star";
@@ -79,7 +79,7 @@ export class CompanyService {
     const companyCopy = companySended.copy();
 
     const companyIndex = this.companies.findIndex(company => company.id === companySended.id);
-    if(companyIndex != -1){
+    if (companyIndex != -1) {
       this.companies[companyIndex] = companyCopy.copy();
       this.save();
     }
@@ -88,7 +88,7 @@ export class CompanyService {
 
   delete(id: number) {
     const companyIndex = this.companies.findIndex(company => company.id === id)
-    if(companyIndex != -1){
+    if (companyIndex != -1) {
       this.companies.splice(companyIndex, 1);
       this.save();
     }
