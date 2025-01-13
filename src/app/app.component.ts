@@ -17,7 +17,7 @@ export class AppComponent {
   search = model('');
 
   filteredCompanies = computed(() =>{
-    return this.companies.filter(company => company.infoCompany.includes(this.search()))
+    return this.companies.filter(company => company.infoCompany.toLocaleLowerCase().includes(this.search()))
   })
 
   constructor() {

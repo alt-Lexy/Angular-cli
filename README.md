@@ -63,4 +63,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 >[!NOTE]
 >ng g c component allow 
+
+>[!NOTE] 
+>track in angular = useMemo() in react js
  
