@@ -16,14 +16,20 @@ import { CompanyService } from './services/company/company.service';
 export class AppComponent {
   companyService = inject(CompanyService)
 
-  companies!: Company[];
+  companies = signal<Company[]>([]);
   search = model('');
 
   filteredCompanies = computed(() =>{
-    return this.companies.filter(company => company.infoCompany.toLocaleLowerCase().includes(this.search()))
+    return this.companies().filter(company => company.infoCompany.toLocaleLowerCase().includes(this.search()))
   })
 
   constructor() { 
-    this.companies = this.companyService.getAll();
+    this.companies.set(this.companyService.getAll());
+  }
+
+  addCompany() {
+    const genericCompany = new Company();
+    this.companyService.add(genericCompany);
+    this.companies.set(this.companyService.getAll());
   }
 }

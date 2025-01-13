@@ -8,7 +8,10 @@ export class Company {
     infoNote: string = "75.80";
     infoScore: string = "B";
 
-    copy(): Company {
+    copy(idCompany?: number): Company {
+        if (idCompany){
+            this.id = idCompany;
+        }
         return Object.assign(new Company(), this)
     }
 }

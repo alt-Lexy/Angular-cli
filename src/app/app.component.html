@@ -12,3 +12,4 @@
 @if (filteredCompanies().length > 0) {
     <div *ngIf="filteredCompanies().length > 0">Found {{filteredCompanies().length}} companies</div>
 }
+<div><button (click)="addCompany()">Add company</button></div>
